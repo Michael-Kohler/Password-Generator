@@ -5,38 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- CSS DIV FOR ENTIRE VISIBLE APPLICATION -->
     <div class="content">
-      <h1>Unsystematic <span>Password Generator</span> Application</h1>
-      <div class="password-cont">
-        <span id="password"></span>
-      </div>
-      <div class="specs">
-        <div class="spec">
-          <label>Password Length</label>
-          <input type="number" id="length" min="8" max="128" value="128" />
+      <h1>Unsystematic Password Generator Application</h1>
+      <h3 class="password-cont" id="passwordDisplay">password</h3>
+      <br />
+      <form id="generatorForm">
+        <div>
+          <label for="lengthNum">Password Length</label>
+          <input type="range" min="8" max="128" value="8" id="lengthRange" />
+          <input type="number" min="8" max="128" value="8" id="lengthNum" />
         </div>
-        <div class="spec">
+        <br />
+        <div>
           <label>Uppercase Letters</label>
           <input type="checkbox" id="uppercase" checked />
         </div>
-        <div class="spec">
+        <br />
+        <div>
           <label>Lowercase Letters</label>
           <input type="checkbox" id="lowercase" checked />
         </div>
-        <div class="spec">
+        <br />
+        <div>
           <label>Numbers</label>
           <input type="checkbox" id="numbers" checked />
         </div>
-        <div class="spec">
+        <br />
+        <div>
           <label>Symbols</label>
           <input type="checkbox" id="symbols" checked />
         </div>
-      </div>
-      <button class="btn" id="generate">Generate Password</button>
+      </form>
+      <br />
+      <button type="submit" class="btn">Generate Password</button>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
